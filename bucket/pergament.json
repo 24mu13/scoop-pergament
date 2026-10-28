@@ -1,0 +1,33 @@
+{
+    "version": "1.8.0",
+    "description": "Offline reader for JW Library publications (.jwpub)",
+    "homepage": "https://github.com/v3rm1n0/pergament",
+    "license": "GPL-3.0-only",
+    "notes": [
+        "Requires the Microsoft Edge WebView2 Runtime (preinstalled on Windows 10/11).",
+        "The library is kept in %APPDATA%\\pergament and is not removed on uninstall."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/v3rm1n0/pergament/releases/download/v1.8.0/Pergament-1.8.0-windows-x86_64.zip",
+            "hash": "2afddd109903d7008e33a37695b93fa918e7077bf30633e377834115d7c5e986",
+            "extract_dir": "Pergament-1.8.0-windows-x86_64"
+        }
+    },
+    "bin": "pergament.exe",
+    "shortcuts": [
+        [
+            "pergament-app.exe",
+            "Pergament"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/v3rm1n0/pergament/releases/download/v$version/Pergament-$version-windows-x86_64.zip",
+                "extract_dir": "Pergament-$version-windows-x86_64"
+            }
+        }
+    }
+}
